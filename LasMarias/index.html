@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Marías S.A.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+    <header>
+        <div>
+            <h3>Las Marías S.A.</h3>
+            <p>Control y registro de pagos</p>
+        </div>
+        <b>Nuevo cobro</b>
+    </header>
+
+    <hr>
+
+
+<h3>Administrar clientes</h3>
+
+<div class="formulario">
+    <input type="text" id="nuevoNombre" placeholder="Nombre completo">
+    <input type="text" id="nuevoDpi" placeholder="DPI">
+    <input type="text" id="nuevoLote" placeholder="Número de lote">
+    <input type="number" id="nuevoSaldo" placeholder="Monto del financiamiento">
+    <input type="number" id="nuevaCuota" placeholder="Cuota mensual">
+</div>
+
+<button type="button" id="agregarCliente">Agregar cliente</button>
+<button type="button" id="eliminarCliente">Eliminar cliente seleccionado</button>
+<hr>
+
+
+    <h4>Buscar cliente</h4>
+    <input type="text" id="buscar" placeholder="Buscar por nombre o DPI">
+    <select id="clientes" size="3"></select>
+
+    <div class="datos">
+        <div>
+            <p>Saldo pendiente</p>
+            <h3 id="saldo">Q 0.00</h3>
+        </div>
+        <div>
+            <p>Cuota mensual</p>
+            <h3 id="cuota">Q 0.00</h3>
+        </div>
+        <div>
+            <p>Proyecto</p>
+            <h3>Las Marías</h3>
+        </div>
+        <div>
+            <p>Lote</p>
+            <h3 id="lote">---</h3>
+        </div>
+    </div>
+
+    <h4>Tipo de pago</h4>
+
+    <div class="radios">
+        <label>
+            <input type="radio" name="tipo" value="meses" checked>
+            Pago de mensualidades
+        </label>
+        <label>
+            <input type="radio" name="tipo" value="capital">
+            Abono a capital
+        </label>
+        <label>
+            <input type="radio" name="tipo" value="variable">
+            Pago variable
+        </label>
+    </div>
+
+    <div id="grupoMeses">
+        <h4>Cantidad de meses</h4>
+        <select id="meses">
+            <option value="1">1 mes</option>
+            <option value="2" selected>2 meses</option>
+            <option value="3">3 meses</option>
+            <option value="4">4 meses</option>
+        </select>
+    </div>
+
+    <div id="grupoMonto" hidden>
+        <h4>Monto a pagar</h4>
+        <input type="number" id="monto" min="0.01" step="0.01"
+               placeholder="Ingrese el monto">
+    </div>
+
+    <div class="total">
+        <strong>Total a pagar</strong>
+        <h2 id="total">Q 0.00</h2>
+    </div>
+
+    <h4>Datos del cobro</h4>
+
+    <label for="fecha">Fecha del pago</label>
+    <input type="date" id="fecha">
+
+    <label for="metodo">Método de pago</label>
+    <select id="metodo">
+        <option>Efectivo</option>
+        <option>Transferencia</option>
+        <option>Tarjeta</option>
+    </select>
+
+    <label for="referencia">Número de referencia</label>
+    <input type="text" id="referencia"
+           placeholder="Número de boleta o referencia">
+
+    <button type="button" id="registrar">Registrar pago</button>
+    <p id="mensaje"></p>
+
+    <h3>Historial de pagos</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Tipo de pago</th>
+                <th>Monto</th>
+                <th>Recibo</th>
+            </tr>
+        </thead>
+        <tbody id="historial"></tbody>
+    </table>
+
+    <section id="recibo" hidden>
+        <h3>Recibo de pago</h3>
+        <p id="datosRecibo"></p>
+        <button type="button" onclick="window.print()">
+            Imprimir recibo
+        </button>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

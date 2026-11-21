@@ -1,0 +1,193 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    color: #222;
+}
+
+main {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 25px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h3, header p {
+    margin: 5px 0;
+}
+
+header p, .datos p {
+    color: #666;
+}
+
+header b {
+    background: #eee;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 25px 0;
+}
+
+h4 {
+    margin: 25px 0 10px;
+    color: #555;
+}
+
+input:not([type="radio"]), select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 15px;
+    background: white;
+}
+
+#clientes {
+    margin-top: 8px;
+    border-radius: 8px;
+}
+
+#clientes option {
+    padding: 8px;
+}
+
+.datos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 25px 10px;
+}
+
+.datos h3 {
+    margin: 5px 0;
+}
+
+.datos p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.radios label {
+    display: block;
+    padding: 9px 0;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.radios input {
+    accent-color: black;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafafa;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.total h2 {
+    font-weight: normal;
+}
+
+main > label {
+    display: block;
+    margin: 15px 0 8px;
+}
+
+button {
+    background: #285580;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #174064;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #eee;
+}
+
+#mensaje {
+    color: green;
+}
+
+#recibo {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 25px;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.formulario input {
+    border-radius: 5px;
+}
+
+#agregarCliente {
+    background: #285580;
+    margin-right: 10px;
+}
+
+#eliminarCliente {
+    background: #b43d3d;
+}
+
+#eliminarCliente:hover {
+    background: #902d2d;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    main {
+        margin: 0;
+        padding: 15px;
+    }
+
+    .datos,
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+}
